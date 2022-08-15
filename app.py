@@ -1,7 +1,9 @@
-from flask import Flask,render_template,request
-import joblib
+    
+from flask import Flask, render_template, request
 app = Flask(__name__)
-@app.route("/",methods= ["GET","POST"])
+import joblib
+
+@app.route("/", methods=["GET","POST"])
 def index():
     if request.method == "POST":
         rates = float(request.form.get("rates"))
@@ -13,6 +15,6 @@ def index():
         return(render_template("index.html",result1=r1,result2=r2))
     else:
         return(render_template("index.html",result1="waiting",result2="waiting"))
-
 if __name__ == "__main__":
     app.run()
+
