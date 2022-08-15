@@ -20,6 +20,6 @@ def index():
         return(render_template("index.html",result1=r1,result2=r2))
     else:
         return(render_template("index.html",result1="waiting",result2="waiting"))
-
+    
 if __name__ == "__main__":
-    app.run(host= "localhost",port = 5008,debug = False)
+    app.run(host= "localhost",port = 5009,debug = False)
