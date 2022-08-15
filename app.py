@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Aug 15 14:00:37 2022
-
-@author: huawei
-"""
-
 from flask import Flask,render_template,request
 import joblib
 app = Flask(__name__)
@@ -22,4 +15,4 @@ def index():
         return(render_template("index.html",result1="waiting",result2="waiting"))
 
 if __name__ == "__main__":
-    app.run(host= "localhost",port = 5011,debug = False)
+    app.run(host= "localhost",port = 5010,debug = False)
